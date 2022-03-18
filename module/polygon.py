@@ -1,9 +1,9 @@
 class Polygon:
     __slots__ = ['__side', '__amount', '__t']
 
-    def __init__(self, side, amount, t):
-        self.__side = side
-        self.__amount = amount
+    def __init__(self, sides,t):
+        self.__side = sides[0]
+        self.__amount = sides[1]
         self.__t = t
 
     def draw(self):

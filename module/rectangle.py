@@ -2,7 +2,7 @@ class Rectangle:
     __slots__ = ['__sides', '__t']
 
     def __init__(self, sides, t):
-        self.__sides = sides
+        self.__sides = sides * 2
         self.__t = t
 
     def draw(self):
