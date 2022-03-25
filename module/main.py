@@ -3,51 +3,51 @@ import turtle, line, rectangle, polygon, circle, ellipse
 
 class Figures:
     def __init__(self, figure, i, t):
-        w = []
+        lst = []
         for j in range(i):
             print(f"Enter {j + 1} argument:")
-            w.append(int(input()))
+            lst.append(int(input()))
 
-        self.figure = figure(w, t)
+        self.figure = figure(lst, t)
 
     def draw(self):
         self.figure.draw()
 
 
 if __name__ == '__main__':
-    win = turtle.Screen()
+    window = turtle.Screen()
     t = turtle.Turtle()
     print('Welcome to Draw Room!')
 
     print('[!] Let\'s draw Line')
-    f = Figures(line.Line, 1, t)
+    figure = Figures(line.Line, 1, t)
     t.color('red')
-    f.draw()
+    figure.draw()
     t.setpos(0, 0)
 
     print('[!] Let\'s draw Rectangle')
-    f = Figures(rectangle.Rectangle, 2, t)
+    figure = Figures(rectangle.Rectangle, 2, t)
     t.color('green')
-    f.draw()
+    figure.draw()
     t.setpos(0, 0)
 
     print('[!] Let\'s draw Polygon')
-    f = Figures(polygon.Polygon, 2, t)
+    figure = Figures(polygon.Polygon, 2, t)
     t.color('blue')
-    f.draw()
+    figure.draw()
     t.setpos(0, 0)
 
     print('[!] Let\'s draw Circle')
-    f = Figures(circle.Circle, 1, t)
+    figure = Figures(circle.Circle, 1, t)
     t.color('purple')
-    f.draw()
+    figure.draw()
     t.setpos(0, 0)
 
     print('[!] Let\'s draw Ellipse')
-    f = Figures(ellipse.Ellipse, 1, t)
+    figure = Figures(ellipse.Ellipse, 1, t)
     t.color('orange')
-    f.draw()
+    figure.draw()
     t.setpos(0, 0)
 
-    win.mainloop()
+    window.mainloop()
 
